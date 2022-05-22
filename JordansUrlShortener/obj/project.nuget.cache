@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rKard8KpaXt8SI8UORJTUYth3Z2cTDbgHN2biht64VzJqRLxeTKv9/lc5XhHoB2QDXiHmF89ZE8pimFHNwPZuQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jamcquillan\\Documents\\MyDocs\\JordansUrlShortener\\JordansUrlShortener.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jamcquillan\\.nuget\\packages\\litedb\\5.0.9\\litedb.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

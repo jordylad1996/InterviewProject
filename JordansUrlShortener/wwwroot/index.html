@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Jordan's URL Shortener</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Jordan's URL Shortener</h1>
+            <p>
+                Enter your URL below to retrieve a shorter version
+            </p>
+        </header>
+        <section id="urlForm">
+            <form enctype="application/x-www-form-urlencoded" method="POST" action="/shorten">
+                <label for="url">
+                    URL to shorten
+                </label>
+                <input type="url" name="url" required="required"/>
+                <button type="submit" style="background-color:cornflowerblue">Shorten</button>
+                <label id="urlShortenedResult">
+                </label>
+                <p id="urlResult" name="urlShortenedResult">
+
+                </p>
+            </form>
+        </section>
+    </main>
+    <script>
+        let data = window.location.hash;
+        if (data) {
+
+            let url = new URL(data.substr(1));
+            console.log(url);
+
+            if (url.protocol === window.location.protocol
+                && url.host === window.location.host) {
+                let sectionText = document.getElementById('urlShortenedResult');
+                sectionText.innerHTML = "Below is your new link, happy web surfing.";
+                let section = document.getElementById('urlResult');
+                section.innerHTML = `<a id="link" href="${url}">${url}</a>`;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
